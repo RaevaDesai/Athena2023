@@ -382,7 +382,7 @@ public class AthenabotMechanumTeleop_Linear extends LinearOpMode {
 
              */
 
-
+            /*
             if(robot.claw1 != null){
                 if(gamepad2.x)
                 {
@@ -391,6 +391,8 @@ public class AthenabotMechanumTeleop_Linear extends LinearOpMode {
                     robot.claw1.setPosition(1.0);
                 }
             }
+
+             */
 
             /*
 
