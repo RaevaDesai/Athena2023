@@ -152,78 +152,16 @@ public class AthenabotMechanumTeleop_Linear extends LinearOpMode {
                                 -Magnitude, +Magnitude, -MAX_SPEED, +MAX_SPEED));
             }
 
+            if (robot.drone1 != null) {
+                if (gamepad2.x) {
+                    robot.drone1.setPosition(0.3);
+                } else if (gamepad2.y) {
+                    robot.drone1.setPosition(0.5);
 
-            // Hinge on a and x - gamepad 2
+                }
 
-         /*if (robot.hinge != null) {
-             if (gamepad2.a) { // cap ball up
-                 robot.hinge.setDirection(DcMotor.Direction.FORWARD); //might need to change to REVERSE
-                 robot.hinge.setPower(robot.HINGE_POWER);
-             } else if (gamepad2.x) {  // cap ball
-                 robot.hinge.setDirection(DcMotor.Direction.REVERSE); //might need to change to FORWARD
-                 robot.hinge.setPower(robot.HINGE_POWER);
-             } else {
-                 robot.hinge.setPower(0.0);
-             }
-         }*/
-          /*if (robot.flip_motor != null) {
-              if (gamepad2.left_bumper) { // ball shoot
-                  robot.flip_motor.setDirection(DcMotor.Direction.FORWARD); //might need to change to FORWARD/REVERSE
-                  robot.flip_motor.setPower(robot.FLIP_POWER);
-              } else if (gamepad2.left_trigger > 0) {
-                  robot.flip_motor.setDirection(DcMotor.Direction.REVERSE);
-                  robot.flip_motor.setPower(robot.FLIP_POWER);
-              } else {
-                  robot.flip_motor.setPower(0.0);
+            }
 
-              }
-
-          }*/
-
-
-
-
-          /*if (robot.stack2_motor != null) {
-              if (gamepad2.left_bumper) { // ball shoot
-                  robot.stack2_motor.setDirection(DcMotor.Direction.FORWARD); //might need to change to FORWARD/REVERSE
-                  robot.stack2_motor.setPower(robot.STACK2_POWER);
-              } else if (gamepad2.left_trigger > 0) {
-                  robot.stack2_motor.setDirection(DcMotor.Direction.REVERSE);
-                  robot.stack2_motor.setPower(robot.STACK2_POWER);
-              } else {
-                  robot.stack2_motor.setPower(0.0);
-
-              }
-
-          }*/
-            // hangigng mechanism - gamepad 2 - trigger and bumper
-          /*if (robot.intake_motor != null) {
-              if (gamepad2.right_bumper) { // ball shoot
-                  robot.intake_motor.setDirection(DcMotor.Direction.FORWARD); //might need to change to FORWARD/REVERSE
-                  robot.intake_motor.setPower(robot.a_intake_power());
-              } else if (gamepad2.right_trigger > 0) {
-                  robot.intake_motor.setDirection(DcMotor.Direction.REVERSE);
-                  robot.intake_motor.setPower(robot.a_intake_power());
-              } else {
-                  robot.intake_motor.setPower(0.0);
-
-              }
-
-          }*/
-
-          /*if (robot.intake2_motor != null) {
-              if (gamepad2.right_bumper) { // ball shoot
-                  robot.intake2_motor.setDirection(DcMotor.Direction.REVERSE); //might need to change to FORWARD/REVERSE
-                  robot.intake2_motor.setPower(robot.INTAKE2_POWER);
-              } else if (gamepad2.right_trigger > 0) {
-                  robot.intake2_motor.setDirection(DcMotor.Direction.FORWARD);
-                  robot.intake2_motor.setPower(robot.INTAKE_POWER);
-              } else {
-                  robot.intake2_motor.setPower(0.0);
-
-              }
-
-          }*/
 
             telemetry.addData("Before", "Pushr");    //
             telemetry.update();
